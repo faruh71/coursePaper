@@ -1,5 +1,8 @@
 public class Main {
-    private static Employee[] journal;
+    public static Employee[] journal;
+    public static void skip() {
+        System.out.println("-----------------");
+    }
 
     public static void main(String[] args) {
         journal = new Employee[10];
@@ -10,15 +13,15 @@ public class Main {
         journal[4] = new Employee("Даниэлян Карен Арменавич", 85_000, 3);
         journal[5] = new Employee("Гафаров Анвар Рустамович", 95_000, 1);
         employeeData();
-        System.out.println();
+        skip();
         System.out.println(" сумму затрат на зарплаты в месяц =" + totalSolary());
-        System.out.println();
+        skip();
         System.out.println("сотрудник с минимальной зарплатойт = " + minSalari());
-        System.out.println();
+        skip();
         System.out.println("сотрудник с максимальной зарплатойт = " + maxSalari());
-        System.out.println();
+        skip();
         System.out.println("средняя зарплпта = " + averegelSolary());
-        System.out.println();
+        skip();
         name();
     }
     public static void employeeData() {
@@ -35,7 +38,7 @@ public class Main {
                 result += journal[i].getSalary();
             }
         }
-        return result;
+        return result ;
     }
     public static Employee minSalari() {
         Employee result = journal[0];
